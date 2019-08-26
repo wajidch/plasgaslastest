@@ -17,7 +17,7 @@ export class OrdersComponent implements OnInit, AfterContentInit {
   lng: number;
 
   locations = [];
-
+  mapshow=[]
   markers = [
     {
       lat: 51.673858,
@@ -63,7 +63,7 @@ export class OrdersComponent implements OnInit, AfterContentInit {
         for (let i = 0; i < orders.length; i++) {
           multipliedPrice = 0;
           if (orders[i].items.length > 0) {
-            if (orders[i].items[0].status == 'pending') {
+            if (orders[i].items[0].status === 'pending') {
               this.locations.push({
                 latitude: orders[i].latitude,
                 longitude: orders[i].longitude,
@@ -71,6 +71,8 @@ export class OrdersComponent implements OnInit, AfterContentInit {
                 order_id: orders[i].id,
                
               });
+
+            
               
               
             }
