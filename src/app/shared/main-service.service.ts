@@ -21,9 +21,13 @@ export class MainServiceService {
         password: password
     }, {headers});
   }
+  
 
   getOrders() {
     return this.http.get(environment.baseUrl + 'admin/orderList');
+  }
+  getPendingOrders() {
+    return this.http.get(environment.baseUrl + 'admin/orderListpending');
   }
 
   updateOrder(status, id) {

@@ -51,7 +51,7 @@ export class OrdersComponent implements OnInit, AfterContentInit {
 
   getOrdersFunc(): void {
     this.locations.length = 0;
-    this.service.getOrders().subscribe(res => {
+    this.service.getPendingOrders().subscribe(res => {
       this.getOrdersRes = res;
       // this.lat = this.getOrdersRes.response[0].latitude;
       // this.lng = this.getOrdersRes.response[0].longitude;
